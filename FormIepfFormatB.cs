@@ -10,7 +10,6 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
-
 namespace IepfFormatBProj
 {
     public partial class iepfformatB : Form
@@ -40,9 +39,7 @@ namespace IepfFormatBProj
                 "BNKADD1, BNKADD2, BNKADD3, BNKCITY, BNKSTATE,BNKCOUNTRY, BNKPINCODE, DIVBANK_CURR, DIVBANK_ACTYPE," +
                 "DIVBANK_ACC,AR_FLAG, UID1, UID2,UID3, PANGUARD, UIDGUARD,BO_RGESS_FLAG,MasterUniqNo) " +
 
-            /*  
-             *  ,
-             *  */
+
             //FILLER2, FILLER3, FILLER4,FILLER6, FILLER7, FILLER8, FILLER9, FILLER10, FILLER11, FILLER12, FILLER13, FILLER14,FILLER15, FILLER16, 
             //FILLER21, FILLER22, FILLER23, FILLER24, FILLER25, FILLER17, FILLER18, FILLER19, FILLER20,FILLER5,
 
@@ -57,17 +54,7 @@ namespace IepfFormatBProj
             "@BNKADD1,@BNKADD2,@BNKADD3,@BNKCITY,@BNKSTATE,@BNKCOUNTRY,@BNKPINCODE,@DIVBANK_CURR,@DIVBANK_ACTYPE,@DIVBANK_ACC," +
             "@AR_FLAG,@UID1,@UID2,@UID3,@PANGUARD,@UIDGUARD,@BO_RGESS_FLAG,@MasterUniqNo)", con);
 
-
-            /*
-             * 
-             * ," +
-                "" +
-                "
-             * 
-             * */
             //@FILLER3,@FILLER4,@FILLER2,@FILLER6,@FILLER7,@FILLER8,@FILLER9,@FILLER10,@FILLER11,@FILLER12,@FILLER13,@FILLER14,@FILLER15,@FILLER16,@FILLER17,@FILLER18,@FILLER19,@FILLER20,@FILLER21,@FILLER22,@FILLER23,@FILLER24,@FILLER25,
-
-
 
             cmd.Parameters.AddWithValue("@RECORD_IDENTIFICATION", lblRecident.Text);
             cmd.Parameters.AddWithValue("@DETRECLINE"       ,txtDtlrlno.Text);
@@ -174,11 +161,9 @@ namespace IepfFormatBProj
             cmd.Parameters.AddWithValue("@RTAIntRefNo", txtIntrefno.Text);
             cmd.Parameters.AddWithValue("@Credit_ISIN", txtCreditisin.Text);
             cmd.Parameters.AddWithValue("@Filler", txtFiller0101.Text);
-            var caty = comboBox1.Text.Substring(0, 4);
-            cmd.Parameters.AddWithValue("@CA_Type", caty);
+            cmd.Parameters.AddWithValue("@CA_Type", txtCaType01.Text);
             cmd.Parameters.AddWithValue("@BApp_Dt", dateTimePicker1.Value.ToString("yyyy-MM-dd"));
-            var alldesc = comboBox1aadesc.Text.Substring(0, 4);
-            cmd.Parameters.AddWithValue("@CA_Description", alldesc);
+            cmd.Parameters.AddWithValue("@CA_Description", txtCaDesc01.Text);
             cmd.Parameters.AddWithValue("@Execution_Dt", dateTimePicker2.Value.ToString("yyyy-MM-dd"));
             cmd.Parameters.AddWithValue("@TotCrQty_FLin", txtTotalcrqtyfli.Text);
             cmd.Parameters.AddWithValue("@TotDrQty_FLin", txtTotaldrqtyfli.Text);
@@ -214,10 +199,8 @@ namespace IepfFormatBProj
             cmd.Parameters.AddWithValue("@FROMDIST_NSDL", txtFromdistinctivenonsdl.Text);
             cmd.Parameters.AddWithValue("@TODIST_NSDL", txtTodistinctivenonsdl.Text);
             cmd.Parameters.AddWithValue("@QTY", txtQuantity.Text);
-            var flagdnr = comboBox1flagdnrange.Text.Substring(0, 2);
-            cmd.Parameters.AddWithValue("@FLAGSTATDNR", flagdnr);
-            var cacode3 = comboBox3.Text.Substring(0, 4);
-            cmd.Parameters.AddWithValue("@CA_TYPE", cacode3);
+            cmd.Parameters.AddWithValue("@FLAGSTATDNR", txtFDNR03.Text);
+            cmd.Parameters.AddWithValue("@CA_TYPE", txtCaType03.Text);
             cmd.Parameters.AddWithValue("@MasterUniqNo", txtMun03.Text);
 
             cmd.ExecuteNonQuery();

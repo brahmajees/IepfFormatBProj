@@ -49,8 +49,6 @@
             this.txtTotalcrqtyfli = new System.Windows.Forms.TextBox();
             this.txtTotaldrqtyfli = new System.Windows.Forms.TextBox();
             this.txtRecidentification = new System.Windows.Forms.TextBox();
-            this.comboBox1aadesc = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.label12 = new System.Windows.Forms.Label();
@@ -68,6 +66,7 @@
             this.btnView01 = new System.Windows.Forms.Button();
             this.btnSave01 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.comboBox7 = new System.Windows.Forms.ComboBox();
             this.txtBorgessflag = new System.Windows.Forms.TextBox();
             this.txtBnkcity = new System.Windows.Forms.TextBox();
             this.comboBox6 = new System.Windows.Forms.ComboBox();
@@ -223,15 +222,15 @@
             this.btnView02 = new System.Windows.Forms.Button();
             this.btnSave02 = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.txtCaType03 = new System.Windows.Forms.TextBox();
+            this.txtFDNR03 = new System.Windows.Forms.TextBox();
             this.label101 = new System.Windows.Forms.Label();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.txtMun03 = new System.Windows.Forms.TextBox();
             this.label29 = new System.Windows.Forms.Label();
             this.label48 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
-            this.comboBox1flagdnrange = new System.Windows.Forms.ComboBox();
             this.label39 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
             this.txtQuantity = new System.Windows.Forms.TextBox();
@@ -248,7 +247,8 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.comboBox7 = new System.Windows.Forms.ComboBox();
+            this.txtCaType01 = new System.Windows.Forms.TextBox();
+            this.txtCaDesc01 = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -279,6 +279,8 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.txtCaDesc01);
+            this.groupBox1.Controls.Add(this.txtCaType01);
             this.groupBox1.Controls.Add(this.label47);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label3);
@@ -297,8 +299,6 @@
             this.groupBox1.Controls.Add(this.txtTotalcrqtyfli);
             this.groupBox1.Controls.Add(this.txtTotaldrqtyfli);
             this.groupBox1.Controls.Add(this.txtRecidentification);
-            this.groupBox1.Controls.Add(this.comboBox1aadesc);
-            this.groupBox1.Controls.Add(this.comboBox1);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.dateTimePicker2);
             this.groupBox1.Controls.Add(this.label12);
@@ -520,141 +520,6 @@
             this.txtRecidentification.TabStop = false;
             this.txtRecidentification.Text = "01";
             this.txtRecidentification.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // comboBox1aadesc
-            // 
-            this.comboBox1aadesc.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1aadesc.FormattingEnabled = true;
-            this.comboBox1aadesc.Items.AddRange(new object[] {
-            "0001-CD ALLOTMENT",
-            "0002-CP ALLOTMENT",
-            "0003-ALLOTMENT OF DEBT INSTRUMENTS",
-            "0004-ALLOTMENT OF WARRANTS",
-            "0005-ALLOTMENT OF SECURITISED INSTRUMENTS",
-            "0006-SCHEME OF ARRANGEMENT",
-            "0007-SCHEME OF AMALGAMATION",
-            "0008-SCHEME OF DE-MERGER",
-            "0009-CAPITAL REDUCTION",
-            "0010-SUB-DIVISION",
-            "0011-CONSOLIDATION",
-            "0012-ALLOTMENT OF WAREHOUSE RECEIPTS",
-            "0013-ALLOTMENT OF PREFERENCE SHARES",
-            "0014-ALLOTMENT OF MUTUAL FUND UNITS",
-            "0015-ALLOTMENT OF VENTURE CAPITAL UNITS",
-            "0016-ESOP/ESOS",
-            "0017-OFFER FOR SALE",
-            "0018-QIP",
-            "0019-NEW FUND OFFER - MUTUAL FUND",
-            "0020-BONUS ISSUE",
-            "0021-FOLLOW ON PUBLIC OFFER",
-            "0022-INITIAL PUBLIC OFFER",
-            "0023-RIGHTS ISSUE",
-            "0024-ISSUE OF SHARES UNDERLYING GDR/GDS",
-            "0025-ISSUE OF SHARES UNDERLYING ADR/ADS",
-            "0026-CONV OF BONDS/DEBENTURES INTO SHARES",
-            "0027-CONV OF WARRANTS INTO SHARES",
-            "0028-CONV OF PREF SHARES INTO SHARES",
-            "0029-CONV OF STMT OF ACCOUNT INTO UNITS",
-            "0030-PARTLY PAID TO PARTLY PAID SHARES",
-            "0031-PARTLY PAID TO FULLY PAID SHARES",
-            "0032-NON PARI PASSU TO PARI PASSU SHARES",
-            "0033-CD REDEMPTION",
-            "0034-CP REDEMPTION",
-            "0035-DEBT INSTRUMENT REDEMPTION",
-            "0036-DEBT INSTRT REDEMPTION-CALL OPTION",
-            "0037-DEBT INSTRT REDEMPTION-PUT OPTION",
-            "0038-REDEMPTION OF PREFERENCE SHARES",
-            "0039-REDEMPTION OF SECURITISED INSTRUMNTS",
-            "0040-BUYBACK/OPEN OFFER",
-            "0041-REVALIDATION OF WAREHOUSE RECEIPTS",
-            "0042-INCORPORATION OF LOCK-IN",
-            "0043-REMOVAL OF LOCK-IN",
-            "0044-TRANSFER OF LOCK-IN",
-            "0045-TRANSMISSION OF LOCK-IN",
-            "0046-RECTIFICATION",
-            "0047-EXTINGUISHMENT",
-            "0048-OPTION CASES",
-            "0049-PREFERENTIAL ALLOTMENT",
-            "0050-CANCELLATION OF CROSSHOLDING",
-            "0051-FORFEITURE OF SHARES",
-            "0052-RE-ISSUE OF FORFEITED SHARES",
-            "0053-FURTHER ISSUE",
-            "0054-CHANGE IN LOCK-IN DETAILS",
-            "0055-PARTIAL REDEMPTION",
-            "0056-GREEN SHOE OPTION",
-            "0057-PRIVATE PLACEMENT",
-            "0058-FRACTIONAL ENTITLEMENT",
-            "0059-DIVIDEND REINVESTMENT OF MUTUAL FUND",
-            "0060-FRACTIONAL ELIMINATION",
-            "0061-RESTRUCTURING",
-            "0062-TRANSFER UNDER SUSPENDED ISIN",
-            "0063-TRANSMISSION UNDER SUSPENDED ISIN",
-            "0064-TRANSFER WITH LOCKIN INCORPORATION",
-            "0065-PP TO PP-DEBT SECURITIES",
-            "0066-PP TO FP-DEBT SECURITIES",
-            "0067-MERGER",
-            "0068-CHANGE IN FACE VALUE",
-            "0069-ALLOTMENT OF UNITS",
-            "0070-DIVIDEND RE-INVESTMENT",
-            "0071-NEW FUND OFFER",
-            "0072-REDEMPTION",
-            "0073-PP TO FP AND FORFEITURE",
-            "0074-ROLLOVER",
-            "0075-EXTENSION OF MATURITY DATE",
-            "0076-REVERSAL OF REDEEMED UNITS",
-            "0077-ALLOTMENT OF SOVEREIGN GOLD BOND",
-            "0078-TRANSFER TO IEPF AUTHORITY",
-            "0079-TECHNICAL REVERSAL",
-            "0080-ALLOTMENT-NON-COMPETITIVE BIDDING",
-            "0081-ALLOTMENT - FROM UNCLAIMED ACCOUNT",
-            "0187-INITIAL SUBSCRIPTION",
-            "0082-ALLOTMENT-RIGHTS ENTITLEMENTS",
-            "0188-EXTINGUISHMENT OF LAPSED RES"});
-            this.comboBox1aadesc.Location = new System.Drawing.Point(177, 158);
-            this.comboBox1aadesc.MaxLength = 4;
-            this.comboBox1aadesc.Name = "comboBox1aadesc";
-            this.comboBox1aadesc.Size = new System.Drawing.Size(248, 21);
-            this.comboBox1aadesc.TabIndex = 126;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.AutoCompleteCustomSource.AddRange(new string[] {
-            "0020-INCORPORATION OF LOCK-IN DETAILS",
-            "0021-EXTENSION OF LOCK-IN RELEASE DATE",
-            "0022-PARTLY PAID TO FULLY PAID",
-            "0023-CAPITAL REDUCTION",
-            "0025-COMMODITIES REVALIDATION",
-            "0026-AMALGAMATION(SIMULTANEOUS)",
-            "0027-DE-MERGER(SIMULTANEOUS)",
-            "0028-RECTIFICATION(SIMULTANEOUS)",
-            "0029-REMOVAL OF LOCK-IN DETAILS(S)",
-            "0030-TRANSFER OF LOCKED-IN SECURITIES(S)",
-            "0032-IEPF (NSDL-NSDL)",
-            "0033-IEPF (CDSL-NSDL)",
-            "0034-IEPF (PHYSICAL-CDSL)",
-            "0035-IEPF (NSDL-CDSL)"});
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "0020-INCORPORATION OF LOCK-IN DETAILS",
-            "0021-EXTENSION OF LOCK-IN RELEASE DATE",
-            "0022-PARTLY PAID TO FULLY PAID",
-            "0023-CAPITAL REDUCTION",
-            "0025-COMMODITIES REVALIDATION",
-            "0026-AMALGAMATION(SIMULTANEOUS)",
-            "0027-DE-MERGER(SIMULTANEOUS)",
-            "0028-RECTIFICATION(SIMULTANEOUS)",
-            "0029-REMOVAL OF LOCK-IN DETAILS(S)",
-            "0030-TRANSFER OF LOCKED-IN SECURITIES(S)",
-            "0032-IEPF (NSDL-NSDL)",
-            "0033-IEPF (CDSL-NSDL)",
-            "0034-IEPF (PHYSICAL-CDSL)",
-            "0035-IEPF (NSDL-CDSL)"});
-            this.comboBox1.Location = new System.Drawing.Point(177, 110);
-            this.comboBox1.MaxLength = 4;
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(248, 21);
-            this.comboBox1.TabIndex = 124;
             // 
             // dateTimePicker1
             // 
@@ -996,6 +861,18 @@
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Detail ";
+            // 
+            // comboBox7
+            // 
+            this.comboBox7.FormattingEnabled = true;
+            this.comboBox7.Items.AddRange(new object[] {
+            "Y-Yes",
+            "N-No"});
+            this.comboBox7.Location = new System.Drawing.Point(748, 409);
+            this.comboBox7.MaxLength = 1;
+            this.comboBox7.Name = "comboBox7";
+            this.comboBox7.Size = new System.Drawing.Size(66, 21);
+            this.comboBox7.TabIndex = 300;
             // 
             // txtBorgessflag
             // 
@@ -2564,15 +2441,15 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.txtCaType03);
+            this.groupBox3.Controls.Add(this.txtFDNR03);
             this.groupBox3.Controls.Add(this.label101);
-            this.groupBox3.Controls.Add(this.comboBox3);
             this.groupBox3.Controls.Add(this.txtMun03);
             this.groupBox3.Controls.Add(this.label29);
             this.groupBox3.Controls.Add(this.label48);
             this.groupBox3.Controls.Add(this.label43);
             this.groupBox3.Controls.Add(this.label42);
             this.groupBox3.Controls.Add(this.label40);
-            this.groupBox3.Controls.Add(this.comboBox1flagdnrange);
             this.groupBox3.Controls.Add(this.label39);
             this.groupBox3.Controls.Add(this.label38);
             this.groupBox3.Controls.Add(this.txtQuantity);
@@ -2594,6 +2471,34 @@
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Detail Dist";
             // 
+            // txtCaType03
+            // 
+            this.txtCaType03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCaType03.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCaType03.Location = new System.Drawing.Point(161, 209);
+            this.txtCaType03.MaxLength = 7;
+            this.txtCaType03.Name = "txtCaType03";
+            this.txtCaType03.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtCaType03.Size = new System.Drawing.Size(58, 22);
+            this.txtCaType03.TabIndex = 141;
+            this.txtCaType03.TabStop = false;
+            this.txtCaType03.Text = "0033";
+            this.txtCaType03.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtFDNR03
+            // 
+            this.txtFDNR03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtFDNR03.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFDNR03.Location = new System.Drawing.Point(161, 187);
+            this.txtFDNR03.MaxLength = 7;
+            this.txtFDNR03.Name = "txtFDNR03";
+            this.txtFDNR03.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtFDNR03.Size = new System.Drawing.Size(58, 22);
+            this.txtFDNR03.TabIndex = 140;
+            this.txtFDNR03.TabStop = false;
+            this.txtFDNR03.Text = "98";
+            this.txtFDNR03.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
             // label101
             // 
             this.label101.AutoSize = true;
@@ -2604,37 +2509,11 @@
             this.label101.TabIndex = 139;
             this.label101.Text = "ISIN";
             // 
-            // comboBox3
-            // 
-            this.comboBox3.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.IntegralHeight = false;
-            this.comboBox3.Items.AddRange(new object[] {
-            "0020-INCORPORATION OF LOCK-IN DETAILS",
-            "0021-EXTENSION OF LOCK-IN RELEASE DATE",
-            "0022-PARTLY PAID TO FULLY PAID",
-            "0023-CAPITAL REDUCTION",
-            "0025-COMMODITIES REVALIDATION",
-            "0026-AMALGAMATION(SIMULTANEOUS)",
-            "0027-DE-MERGER(SIMULTANEOUS)",
-            "0028-RECTIFICATION(SIMULTANEOUS)",
-            "0029-REMOVAL OF LOCK-IN DETAILS(S)",
-            "0030-TRANSFER OF LOCKED-IN SECURITIES(S)",
-            "0032-IEPF (NSDL-NSDL)",
-            "0033-IEPF (CDSL-NSDL)",
-            "0034-IEPF (PHYSICAL-CDSL)",
-            "0035-IEPF (NSDL-CDSL)"});
-            this.comboBox3.Location = new System.Drawing.Point(161, 209);
-            this.comboBox3.MaxLength = 2;
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(255, 21);
-            this.comboBox3.TabIndex = 127;
-            // 
             // txtMun03
             // 
             this.txtMun03.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtMun03.Font = new System.Drawing.Font("Segoe UI Semibold", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMun03.Location = new System.Drawing.Point(161, 231);
+            this.txtMun03.Location = new System.Drawing.Point(161, 233);
             this.txtMun03.MaxLength = 4;
             this.txtMun03.Name = "txtMun03";
             this.txtMun03.RightToLeft = System.Windows.Forms.RightToLeft.No;
@@ -2691,33 +2570,6 @@
             this.label40.Size = new System.Drawing.Size(150, 15);
             this.label40.TabIndex = 130;
             this.label40.Text = "From_Distinctive_No_NSDL";
-            // 
-            // comboBox1flagdnrange
-            // 
-            this.comboBox1flagdnrange.AutoCompleteCustomSource.AddRange(new string[] {
-            "00-Without DN Booking",
-            "01-Final trading permission is available",
-            "02-Final trading permission is awaited",
-            "03-Cancelled",
-            "04-Forfeiture",
-            "06-Buyback",
-            "99-Miscellaneous"});
-            this.comboBox1flagdnrange.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1flagdnrange.FormattingEnabled = true;
-            this.comboBox1flagdnrange.IntegralHeight = false;
-            this.comboBox1flagdnrange.Items.AddRange(new object[] {
-            "00-Without DN Booking",
-            "01-Final trading permission is available",
-            "02-Final trading permission is awaited",
-            "03-Cancelled",
-            "04-Forfeiture",
-            "06-Buyback",
-            "99-Miscellaneous"});
-            this.comboBox1flagdnrange.Location = new System.Drawing.Point(161, 187);
-            this.comboBox1flagdnrange.MaxLength = 2;
-            this.comboBox1flagdnrange.Name = "comboBox1flagdnrange";
-            this.comboBox1flagdnrange.Size = new System.Drawing.Size(214, 21);
-            this.comboBox1flagdnrange.TabIndex = 126;
             // 
             // label39
             // 
@@ -2877,7 +2729,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(454, 637);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(437, 63);
+            this.dataGridView1.Size = new System.Drawing.Size(437, 80);
             this.dataGridView1.TabIndex = 5;
             // 
             // dataGridView2
@@ -2885,34 +2737,50 @@
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(897, 637);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(582, 143);
+            this.dataGridView2.Size = new System.Drawing.Size(582, 167);
             this.dataGridView2.TabIndex = 6;
             // 
             // dataGridView3
             // 
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(454, 712);
+            this.dataGridView3.Location = new System.Drawing.Point(454, 723);
             this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(437, 68);
+            this.dataGridView3.Size = new System.Drawing.Size(437, 81);
             this.dataGridView3.TabIndex = 7;
             // 
-            // comboBox7
+            // txtCaType01
             // 
-            this.comboBox7.FormattingEnabled = true;
-            this.comboBox7.Items.AddRange(new object[] {
-            "Y-Yes",
-            "N-No"});
-            this.comboBox7.Location = new System.Drawing.Point(748, 409);
-            this.comboBox7.MaxLength = 1;
-            this.comboBox7.Name = "comboBox7";
-            this.comboBox7.Size = new System.Drawing.Size(66, 21);
-            this.comboBox7.TabIndex = 300;
+            this.txtCaType01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCaType01.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCaType01.Location = new System.Drawing.Point(177, 109);
+            this.txtCaType01.MaxLength = 7;
+            this.txtCaType01.Name = "txtCaType01";
+            this.txtCaType01.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtCaType01.Size = new System.Drawing.Size(58, 22);
+            this.txtCaType01.TabIndex = 142;
+            this.txtCaType01.TabStop = false;
+            this.txtCaType01.Text = "0033";
+            this.txtCaType01.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // txtCaDesc01
+            // 
+            this.txtCaDesc01.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCaDesc01.Font = new System.Drawing.Font("Segoe UI Semibold", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCaDesc01.Location = new System.Drawing.Point(177, 157);
+            this.txtCaDesc01.MaxLength = 7;
+            this.txtCaDesc01.Name = "txtCaDesc01";
+            this.txtCaDesc01.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.txtCaDesc01.Size = new System.Drawing.Size(58, 22);
+            this.txtCaDesc01.TabIndex = 155;
+            this.txtCaDesc01.TabStop = false;
+            this.txtCaDesc01.Text = "0078";
+            this.txtCaDesc01.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // iepfformatB
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1500, 792);
+            this.ClientSize = new System.Drawing.Size(1500, 816);
             this.Controls.Add(this.dataGridView3);
             this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
@@ -2969,8 +2837,6 @@
         private System.Windows.Forms.TextBox txtTotalcrqtyfli;
         private System.Windows.Forms.TextBox txtTotaldrqtyfli;
         private System.Windows.Forms.TextBox txtRecidentification;
-        private System.Windows.Forms.ComboBox comboBox1aadesc;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.Label label12;
@@ -2985,14 +2851,12 @@
         private System.Windows.Forms.TextBox txtFyAmtRel;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.TextBox txtIepfmun01;
-        private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.TextBox txtMun03;
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Label label48;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.ComboBox comboBox1flagdnrange;
         private System.Windows.Forms.Label label39;
         private System.Windows.Forms.Label label38;
         private System.Windows.Forms.TextBox txtQuantity;
@@ -3161,6 +3025,10 @@
         private System.Windows.Forms.TextBox txtBorgessflag;
         private System.Windows.Forms.Label label101;
         private System.Windows.Forms.ComboBox comboBox7;
+        private System.Windows.Forms.TextBox txtCaType03;
+        private System.Windows.Forms.TextBox txtFDNR03;
+        private System.Windows.Forms.TextBox txtCaDesc01;
+        private System.Windows.Forms.TextBox txtCaType01;
     }
 }
 
